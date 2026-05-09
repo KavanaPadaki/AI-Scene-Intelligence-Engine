@@ -1,0 +1,73 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Virtual Environments
+# =========================
+venv/
+env/
+.venv/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Build / Distribution
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Testing
+# =========================
+.pytest_cache/
+
+# =========================
+# Temporary Files
+# =========================
+*.tmp
+*.swp
+
+# =========================
+# Vector Store / Generated Files
+# =========================
+vector_store/
+
+# =========================
+# Optional Large Data Files
+# =========================
+# Keep .srt files tracked
+# Ignore only very large media if needed
+
+*.mp4
+*.mkv
+*.avi
