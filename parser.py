@@ -1,4 +1,5 @@
 import pysrt
+import re
 
 
 def load_subtitles(file_path):
@@ -19,6 +20,9 @@ def load_subtitles(file_path):
             .replace("-", "")
             .strip()
         )
+
+        # Remove HTML tags like <i>...</i>
+        cleaned_text = re.sub(r"<.*?>", "", cleaned_text)
 
         # Skip empty subtitles
         if not cleaned_text:
