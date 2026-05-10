@@ -12,6 +12,7 @@ index = None
 
 
 def create_index(chunks):
+
     global stored_chunks
     global index
 
@@ -26,7 +27,7 @@ def create_index(chunks):
 
     print(f"Embeddings shape: {embeddings.shape}")
 
-    # CREATE NEW INDEX
+    # Create fresh FAISS index
     index = faiss.IndexFlatL2(dimension)
 
     index.add(embeddings)
@@ -39,6 +40,7 @@ def create_index(chunks):
 
 
 def search(query, k=3):
+
     global index
 
     if index is None:
@@ -67,10 +69,15 @@ def search(query, k=3):
         if idx >= len(stored_chunks):
             continue
 
-        result = stored_chunks[idx].copy()
+        result = stored_chunks[idx]
 
-        result["score"] = float(distance)
+        formatted_result = {
+            "movie": result["movie"],
+            "timestamp": f"{result['start']} → {result['end']}",
+            "scene": result["text"],
+            "score": round(float(distance), 3)
+        }
 
-        results.append(result)
+        results.append(formatted_result)
 
     return results

@@ -4,3 +4,5 @@ sentence-transformers
 faiss-cpu
 pysrt
 numpy
+streamlit
+requests

@@ -25,7 +25,6 @@ def load_subtitles(file_path):
             continue
 
         scene = {
-            "movie": "The Dark Knight",
             "start": str(sub.start),
             "end": str(sub.end),
             "text": cleaned_text
@@ -74,6 +73,10 @@ if __name__ == "__main__":
     scenes = load_subtitles(file_path)
 
     print(f"Loaded {len(scenes)} subtitle entries")
+
+    # Add movie name manually for local test
+    for scene in scenes:
+        scene["movie"] = "The Dark Knight"
 
     chunks = create_scene_chunks(scenes)
 
