@@ -9,15 +9,15 @@ Instead of keyword matching, CineMind retrieves scenes based on semantic meaning
 - [**Live Demo (UI)**](https://cine-mind-ai-scene-intelligence-engine--padakikavana.replit.app)
   
 ## HOME
-- [**CineMind Home**](assets/home.png)
+- [**CineMind Home**](assets/Home.png)
 
 ## Semantic Retrieval Results
 
-![Results](assets/results.png)
+![Results](assets/Results.png)
 
 ## Architecture
 
-![Architecture](assets/architecture.png)
+![Architecture](assets/Architecture.png)
 ---
 
 # Features
